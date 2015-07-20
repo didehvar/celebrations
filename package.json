@@ -10,7 +10,7 @@
     "jquery": "cp node_modules/jquery/dist/jquery.min.js dist/js/vendor",
     "bootstrap": "cp -r node_modules/bootstrap/dist/css/bootstrap.min.css dist/css/ && cp -r node_modules/bootstrap/dist/js/bootstrap.min.js dist/js/",
     "font-awesome": "cp -r node_modules/font-awesome/css/font-awesome.min.css dist/css/ && cp -r node_modules/font-awesome/fonts dist/",
-    "less": "lessc --clean-css='compatibility=ie8 --advanced' less/* dist/css/main.min.css",
+    "less": "lessc less/* dist/css/main.css",
     "public": "cp -r public/ dist/",
     "build": "npm run mkdir && npm run normalize && npm run jquery && npm run bootstrap",
     "watch": "npm run build && parallelshell 'npm run watch:public' 'npm run watch:less'",
