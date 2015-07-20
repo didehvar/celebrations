@@ -12,8 +12,9 @@
     "font-awesome": "cp -r node_modules/font-awesome/css/font-awesome.min.css dist/css/ && cp -r node_modules/font-awesome/fonts dist/",
     "less": "lessc less/* dist/css/main.css",
     "public": "cp -r public/ dist/",
-    "build": "npm run mkdir && npm run normalize && npm run jquery && npm run bootstrap",
-    "watch": "npm run build && parallelshell 'npm run watch:public' 'npm run watch:less'",
+    "build": "npm run clean && npm run watch:build && npm run public && npm run less",
+    "watch": "npm run watch:build && parallelshell 'npm run watch:public' 'npm run watch:less'",
+    "watch:build": "npm run mkdir && npm run normalize && npm run jquery && npm run bootstrap && npm run font-awesome",
     "watch:public": "nodemon -w public -e '.' -x 'npm run public'",
     "watch:less": "nodemon -w less -e '.' -x 'npm run less'",
     "livereload": "livereloadx dist"
