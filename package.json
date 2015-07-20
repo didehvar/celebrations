@@ -1,0 +1,27 @@
+{
+  "name": "celebrations",
+  "version": "0.0.1",
+  "description": "Website for Celebrations of Stourbridge.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "bootstrap": "cp -r node_modules/bootstrap/dist/css/bootstrap.min.css dist/css/ && cp -r node_modules/bootstrap/dist/js/bootstrap.min.js dist/js/",
+    "less": "lessc --clean-css='compatibility=ie8 --advanced' less/* dist/css/min.css",
+    "build": "npm run bootstrap && npm run less",
+    "watch-less": "nodemon -e less -w less -x 'npm run less'"
+  },
+  "author": "James Didehvar <james@didehvar.com>",
+  "contributors": [
+    {
+      "name": "Matt Didehvar"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.5",
+    "less": "^2.5.1",
+    "less-plugin-clean-css": "^1.5.0",
+    "nodemon": "^1.3.7",
+    "rimraf": "^2.4.2"
+  }
+}
