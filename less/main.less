@@ -23,9 +23,10 @@ body {
 
   width: 100%;
   height: @header-background-image-height;
+  position: relative;
 
   .navbar-default {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     border-color: transparent;
 
     padding-left: 30px;
@@ -74,6 +75,12 @@ body {
       }
     }
   }
+
+  #change-navbar {
+    bottom: 0;
+    height: 55px;
+    position: absolute;
+  }
 }
 
 .content {
@@ -88,15 +95,24 @@ body {
     border-bottom: 2px solid @brand-colour;
   }
 
-  .img-small {
+  .img-circle {
     width: 250px;
     height: 250px;
 
     margin-bottom: 15px;
   }
 
+  .img-small {
+    width: 150px;
+    height: 150px;
+  }
+
   .section-title {
     margin-top: 20px;
+  }
+
+  .row-space {
+    padding: 20px;
   }
 }
 
@@ -104,7 +120,7 @@ footer {
   color: white;
   background-color: #161616;
   margin-top: 15px;
-  padding-top: 15px;
+  padding-top: 25px;
 
   h4 {
     text-transform: uppercase;
