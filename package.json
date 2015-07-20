@@ -9,6 +9,7 @@
     "normalize": "cleancss -o dist/css/normalize.min.css node_modules/normalize.css/normalize.css",
     "jquery": "cp node_modules/jquery/dist/jquery.min.js dist/js/vendor",
     "bootstrap": "cp -r node_modules/bootstrap/dist/css/bootstrap.min.css dist/css/ && cp -r node_modules/bootstrap/dist/js/bootstrap.min.js dist/js/",
+    "font-awesome": "cp -r node_modules/font-awesome/css/font-awesome.min.css dist/css/ && cp -r node_modules/font-awesome/fonts dist/",
     "less": "lessc --clean-css='compatibility=ie8 --advanced' less/* dist/css/main.min.css",
     "public": "cp -r public/ dist/",
     "build": "npm run mkdir && npm run normalize && npm run jquery && npm run bootstrap",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "bootstrap": "^3.3.5",
     "clean-css": "^3.3.6",
+    "font-awesome": "^4.3.0",
     "jquery": "^2.1.4",
     "less": "^2.5.1",
     "less-plugin-clean-css": "^1.5.0",

@@ -1,40 +1,143 @@
 
-@pink-hover: pink;
+@import "../node_modules/bootstrap/less/bootstrap.less";
+@import "../node_modules/font-awesome/less/font-awesome.less";
+
+@brand-colour: pink;
+
+@navbar-text-size: 14px;
+@navbar-text-size-brand: 18px;
+
+@header-text-size: 36px;
+@header-text-size-small: 18px;
+@header-background-image-height: 512px;
 
 body {
-  font-family: Arial Bold, sans-serif;
 }
 
 .header {
-  background: url(../img/skyline.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/skyline.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
   width: 100%;
-  height: 520px;
-}
+  height: @header-background-image-height;
 
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
+  .navbar-default {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: transparent;
 
-  .navbar-brand {
-    color: white;
-    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
 
-    &:hover {
-      color: @pink-hover;
+    .navbar-brand {
+      color: white;
+      text-transform: uppercase;
+      font-size: @navbar-text-size-brand;
+
+      &:hover {
+        color: @brand-colour;
+      }
+    }
+
+    .navbar-nav > li > a {
+      color: white;
+      text-transform: uppercase;
+      font-size: @navbar-text-size;
+
+      &:hover {
+        color: @brand-colour;
+      }
     }
   }
 
-  .navbar-nav > li > a {
-    color: white;
-    text-transform: uppercase;
+  .title {
+    margin-top: 150px;
 
-    &:hover {
-      color: @pink-hover;
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: @header-text-size;
+      line-height: 0.5;
+      text-align: center;
+
+      @media (min-width: @screen-md-min) {
+        font-size: @header-text-size + 12px;
+        line-height: 0.4;
+      }
+
+      small {
+        color: pink;
+        font-size: @header-text-size-small;
+      }
+    }
+  }
+}
+
+.content {
+  h1 {
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid @brand-colour;
+  }
+
+  .img-small {
+    width: 250px;
+    height: 250px;
+
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    margin-top: 20px;
+  }
+}
+
+footer {
+  color: white;
+  background-color: #161616;
+  margin-top: 15px;
+  padding-top: 15px;
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  .col-sm-3,
+  .col-sm-6 {
+    margin-bottom: 25px;
+  }
+
+  .col-sm-6 {
+    a {
+      color: white;
+
+      &:hover {
+        color: @brand-colour;
+      }
+
+      i {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
     }
   }
 }
